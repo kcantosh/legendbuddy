@@ -1,5 +1,5 @@
 # legendbuddy
-A tool for quickly making legends for CartoDB maps
+A tool for quickly making legends for CartoDB maps . [Try it here](http://chriswhong.github.io/legendbuddy/)
 
 CartoDB legends are auto-generated when using the wizards, but the ability to build an ad-hoc legend is limited.
 There is also no concept of dashed lines and strokes, or polygons with strokes byut no fill in the current legend setup.
