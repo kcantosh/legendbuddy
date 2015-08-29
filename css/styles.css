@@ -1,24 +1,25 @@
 
-body,html {
-    font: normal 13px "Helvetica",Arial;
-    color: #858585;
-    margin: 0;
+div.cartodb-legend {
+    display: inline-block !important;
+    position: inherit;
+} 
+
+div.cartodb-legend.custom ul li .bullet {
+    -webkit-box-sizing: content-box; 
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+#legendItems div.cartodb-legend {
+    border:none;
 }
 
-.legend li {
-/*  background: #eee;*/
-  margin-bottom:10px;
-
-  width:100%;
-}
-
-.legend li:hover {
-    cursor:move;
+#itemList>li {
+    border: 1px dashed #D3D3D3;
+    border-radius: 2px;
+    padding: 10px;
+    min-height: 30px;
+    height:auto;
 }
 
 .sortable-ghost {
@@ -27,132 +28,9 @@ ul {
   border-radius:4px;
 }
 
-.legendItems li {
-    border: 1px dashed #A8A8A8;
-    border-radius: 7px;
-}
 
-.legendContainer {
-    width:160px;
 
-    webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 4px 2px;
-    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 4px 2px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0 0 4px 2px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
-    border-radius: 4px;
-    border: 1px solid #999999;
-    background: white;
-    z-index: 105;
-    cursor: text;
-    display:inline-block;
-}
-
-.legend {
-    padding: 13px 15px 15px 15px;
-    margin: 0;
-}
-
-.title {
-    margin-top: 0;
-    font-size: 1.17em;
-    margin-bottom: 10px;
-    font-weight: 800;
-}
-
-.header {
-    font: normal 13px "Helvetica",Arial;
-    margin-bottom: 10px;
-    font-weight: 800;
-}
-
-.left {
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-    border-radius: 3px;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding;
-    background-clip: padding;
-    /* box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2); */
-    border: 1px solid #b3b3b3;
-    width:30px;
-    display:inline-block;
-    vertical-align: top;
-    margin-right: 10px;
-
-}
-
-.right {
-    display:inline-block;
-    vertical-align: top;
-}
-
-.polygon {
-    height:22px;
-    width:100%;
-}
-
-.line {
-    border-bottom: 2px solid #ff00a5;
-    position: relative;
-    top: 8px;
-    left: 1px;
-}
-
-.noBorder {
-    border:none;
-}
-
-.containerLeft,.containerRight {
-    width:49%;
-    display:inline-block;
-}
-
-.labelText {
-    height: 22px;
-    padding-top: 3px;
-    box-sizing: border-box;
-    text-align: right;
-    width: 80px;
-}
-
-.bullet {
-    float: left;
-    margin: 0 5px 0 0;
-    width: 3px;
-    height: 3px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%;
-    padding: 2px;
-    background: #fff;
-    border: 1px solid rgba(0,0,0,0.2);
-    z-index: 1000;
-    position: relative;
-    top: 6px;
-    left: 12px;
-}
-
-.legend i {
-    -webkit-transition: opacity .2s;
-    transition: opacity .2s;
-    opacity: 0;
-    display: block;
-    cursor: pointer;
-    color: #c00;
-    top: 10px;
-    right: 40px;
-    position: absolute;
-    font-style: normal;
-}
-
-.legend li:hover i {
+#editable li:hover i {
     opacity: 1;
 }
 

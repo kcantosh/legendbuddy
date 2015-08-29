@@ -2,11 +2,13 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Sortable: group</title>
+  <title>LegendBuddy</title>
 
   <!-- Sortable.js -->
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  
 </head>
 <body>
   <nav class="navbar navbar-custom" role="navigation">
@@ -51,92 +53,118 @@
     <br/><br/>  
     <div class="row">
       <div class="col-xs-4">
-        <div class="panel panel-default text-center">
+        <div class="panel panel-default text-center" id="legendItems">
           <div class="panel-heading">
             <h3 class="panel-title">Legend Items</h3>
           </div>
           <div class="panel-body">
-            <div class="legendContainer legendItems">
-              <ul class="legend" id="sortable">
-                <li class="title">Legend</li>
-                <li class="header">Annual Tax Due</li>
-                <li class="legendRow">
-                  <div class="left">
-                    <div class="polygon" style="background-color:#005824"></div>
-                    <div class="polygon" style="background-color:#238B45"></div>
-                    <div class="polygon" style="background-color:#41AE76"></div>
-                    <div class="polygon" style="background-color:#66C2A4"></div>
-                    <div class="polygon" style="background-color:#CCECE6"></div>
-                    <div class="polygon" style="background-color:#D7FAF4"></div>
-                    <div class="polygon" style="background-color:#EDF8FB"></div>
-                  </div>
-                  <div class="right">
-                    <div class="labelText"><= $67.3M</div>
-                    <div class="labelText">$1.6M</div>
-                    <div class="labelText">$39.0K</div>
-                    <div class="labelText">$20.4K</div>
-                    <div class="labelText">$5.8K</div>
-                    <div class="labelText">$4.5K</div>
-                    <div class="labelText">$4.2K</div>
-                  </div>
+            <div class="cartodb-legend custom">
+              <ul id="itemList">
+                <li> 
+                  <div class="legend-title" style="font-size:14px; text-transform: none">Large Title<div>
                 </li>
-                <li class="legendRow">
-                  <div class="left">
-                    <div class="polygon" style="background-color:#ff00a5;"></div>
-                  </div>
-                  <div class="right">
-                    <div class="labelText"> No Tax Due</div>
-                  </div>
+                <li> 
+                  <div class="legend-title" style="text-transform: none;">Small Title<div>
                 </li>
-                <li class="header">Building Type</li>
-                <li class="legendRow">
-                  <div class="left noBorder">
-                    <div class="polygon" style="border:2px solid #F6FF17;"></div>
-                  </div>
-                  <div class="right">
-                    <div class="labelText">Condo</div>
-                  </div>
+                <li style="margin-bottom:0">
+                  <div style="border-bottom: 2px solid #666;height:0"></div>
                 </li>
-
+                <li>
+                </li>
+                <li style="text-transform: none;">   
+                  <div class="point bullet" style="    background: #229A00;
+    margin: 0 21px 0 12px;"></div>
+                  Circle Marker
+                </li>
+                
+                <li style="text-transform: none;">
+                  <div class="line" style="border-bottom: 2px solid #FF7D15;width: 34px;display: inline-block;position: relative;top: -3px;margin-right: 5px;"></div>
+                  Solid Line
+                </li>
+                <li style="text-transform: none;">
+                  <div class="line" style="border-bottom: 2px dashed steelblue;width: 34px;display: inline-block;position: relative;top: -3px;margin-right: 5px;"></div>
+                  Dashed Line
+                </li>
+                <li style="height:auto; text-transform: none;">
+                  <div class="polygon" style="background-color: steelblue;
+    height: 22px;
+    width: 34px;
+    border-radius: 3px;
+    display: inline-block;
+    top: 6px;
+    vertical-align: middle;
+    margin-right: 5px;"></div>
+                  Filled Polygon
+            
+                </li>
+                <li style="height:auto; text-transform: none;">
+                  <div class="polygon" style="background-color: none;
+    height: 22px;
+    width: 34px;
+    display: inline-block;
+    border-radius: 3px;
+    border: 2px solid #FF0000;
+    top: 6px;
+    vertical-align: middle;
+    margin-right: 5px;"></div>
+                  Stroked Polygon
+            
+                </li>
+                <li style="height:auto;">
+                  <ul>
+                    <div style="height:auto; text-transform: none;">
+                      <div class="polygon" style="background-color: #005824;
+                      border-radius: 3px 3px 0 0;
+    height: 22px;
+    width: 34px;
+    display: inline-block;
+    top: 6px;
+    vertical-align: middle;
+    margin-right: 5px;"></div>
+                      Choropleth0
+                    </div>
+                    <div style="height:auto; text-transform: none;">
+                      <div class="polygon" style="background-color: #238B45;
+    height: 22px;
+    width: 34px;
+    display: inline-block;
+    top: 6px;
+    vertical-align: middle;
+    margin-right: 5px;"></div>
+                      Choropleth1
+                    </div>
+                    <div style="height:auto; text-transform: none;">
+                      <div class="polygon" style="background-color: #41AE76;
+    height: 22px;
+    width: 34px;
+    display: inline-block;
+    top: 6px;
+    vertical-align: middle;
+    margin-right: 5px;
+    border-radius: 0 0 3px 3px;"></div>
+                      Choropleth2
+                    </div>
+                  </ul>
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
       <div class="col-xs-4">
-        <div class="panel panel-default text-center ">
+        <div class="panel panel-default text-center" id="yourLegend">
           <div class="panel-heading">
             <h3 class="panel-title">Your Legend</h3>
           </div>
           <div class="panel-body">
-            <div class="legendContainer">
-              <ul class="legend" id="sortable2">
-                <li class="title">Title</li>
-                <li class="header">Header</li>
-                <li class="legendRow">
-                  <div class="left noBorder">
-                    <div class="bullet" style="background: #A6CEE3"></div>
-                  </div>
-                  <div class="right">
-                    <div class="labelText"> Point</div>
-                  </div>
-                  <i class="js-remove">✖</i>
-                </li>
-                <li class="legendRow">
-                  <div class="left noBorder">
-                    <div class="line" style="border-bottom: 2px solid #ff00a5;"></div>
-                  </div>
-                  <div class="right">
-                    <div class="labelText"> Line</div>
-                  </div>
-                </li>
-                <li class="legendRow">
-                  <div class="left">
-                    <div class="polygon" style="background-color:steelblue;"></div>
-                  </div>
-                  <div class="right">
-                    <div class="labelText"> Polygon</div>
-                  </div>
+
+   
+
+
+            <div class="cartodb-legend custom">
+              <ul  id="sortable2">
+                <li> 
+                  <div class="legend-title" style="font-size:14px; text-transform: none; ">Legend Title<div>
                 </li>
                 
 
@@ -146,7 +174,13 @@
         </div>
       </div>
       <div class="col-xs-4">
-        
+        <div class="panel panel-default text-center " id="html">
+          <div class="panel-heading">
+            <h3 class="panel-title">HTML</h3>
+          </div>
+          <div class="panel-body">
+          </div>
+        </div>
       </div>
     </div>
   </div>  
@@ -154,6 +188,6 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
-<script src="http://rubaxa.github.io/Sortable/Sortable.js"></script>
+<script src="//rubaxa.github.io/Sortable/Sortable.js"></script>
 <script src="js/script.js"></script>
 </html>
