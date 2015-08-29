@@ -6,7 +6,7 @@ There is also no concept of dashed lines and strokes, or polygons with strokes b
 
 The intent is let the user build a legend with a GUI, then copy and paste an HTML snippet to bring it into their map in CartoDB.
 
-For now it is just a Proof of Concept for some of the GUI elements and inline CSS (you can't add <style> tags to a cartoDB custom legend, so all the sytles need to be inline.)
+For now it is just a Proof of Concept for some of the GUI elements and inline CSS (you can't add `<style>` tags to a cartoDB custom legend, so all the sytles need to be inline.)
 
 Some nice to haves:
 - Add a backend (or use localStorage) so users can save their legends and come back to them later.
